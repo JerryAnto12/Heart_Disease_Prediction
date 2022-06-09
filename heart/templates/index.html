@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Heart</title>
+    <link rel="stylesheet" href="/static/main.css" />
+    
+  </head>
+
+  <body>
+    <div class="login">
+      <h1 align="center" >Heart Disease Prediction</h1>
+
+      <form action="{{ url_for('predict')}}" method="post">
+        <label for="age">Age : </label>
+        <input type="text" id="age" name="age" />
+        <br />
+
+        <label for="sex">Sex(1:Male,0:Female) : </label>
+        <input type="text" id="sex" name="sex" />
+        <br />
+
+        <label for="chest pain type">Chest pain type : </label>
+        <input type="text" id="chest pain type" name="chest pain type" />
+        <br />
+
+        <label for="trestbps">Trestbps : </label>
+        <input type="text" id="trestbps" name="trestbps" />
+        <br />
+
+        <label for="serum cholestoral in mg/dl"
+          >Serum cholestoral in mg/dl :
+        </label>
+        <input
+          type="text"
+          id="serum cholestoral in mg/dl"
+          name="serum cholestoral in mg/dl"
+        />
+        <br />
+
+        <label for="fbs">fasting blood sugar > 120 mg/dl: </label>
+        <input type="text" id="fbs" name="fbs" />
+        <br />
+
+        <label for="restecg">Restecg : </label>
+        <input type="text" id="restecg" name="restecg" />
+        <br />
+
+        <label for="thalach">Thalach : </label>
+        <input type="text" id="thalach" name="thalach" />
+        <br />
+
+        <label for="exang">Exang : </label>
+        <input type="text" id="exang" name="exang" />
+        <br />
+
+        <label for="oldpeak">Oldpeak : </label>
+        <input type="text" id="oldpeak" name="oldpeak" />
+        <br />
+
+        <label for="slope">Slope : </label>
+        <input type="text" id="slope" name="slope" />
+        <br />
+
+        <label for="ca">ca  number of vessels(0-3) </label>
+       
+        <input type="text" id="ca" name="ca" />
+        <br />
+
+        <label for="thal">Thal : </label>
+        <input type="text" id="thal" name="thal" />
+        <br />
+        <br />
+        <tr>
+          <td><input type="submit" value="Submit" /></td>
+          <td><input type="reset" value="Reset" /></td>
+        </tr>
+
+
+
+
+        </button>
+      </form>
+
+      <br />
+      <br />
+      {{ prediction_text }}
+    </div>
+  </body>
+</html>
